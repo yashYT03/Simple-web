@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://www.hdwallpapers.in/download/car_on_road_hd_dark_aesthetic-HD.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  position: fixed;
+}
+
+#logo {
+  width: 40px;
+  height: 50px;
+  border-radius: 2px;
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+.container .nav ul {
+  display: flex;
+  width: 400px;
+  justify-content: space-evenly;
+  color: white;
+}
+.container .nav {
+  display: flex;
+  justify-content: space-between;
+}
+.body-content {
+  margin-top: 17%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  animation-name: move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-35px, -40px, -150px)
+      rotate3d(1, -1, 0, 35deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0, 0, 0);
+  }
+}
+
+.btn {
+  color: white;
+  background-color: red;
+  margin-left: 48%;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  color: rgb(0, 0, 0);
+  background-color: gray;
+}
+
+.container ul li:hover {
+  color: rgb(0, 0, 0);
+}
